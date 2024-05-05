@@ -107,7 +107,6 @@ import Pagination from '@/components/Pagination/index.vue'
 export default {
   name: 'FileManageTable',
   components: { Pagination },
-  // components: { Pagination },
   directives: { waves },
   filters: {
     statusFilter(status) {

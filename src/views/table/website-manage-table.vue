@@ -8,7 +8,6 @@
         icon="el-icon-plus"
         @click="handleCreateWebsite"
       >
-
         创建网站
       </el-button>
     </div>
@@ -76,13 +75,13 @@
         style="width: 500px; margin: 0 auto;"
       >
         <el-form-item label-width="100px" :label="('域名')">
-          <el-input v-model="temp.domain" />
+          <el-input v-model="temp.domain" placeholder=".com" />
         </el-form-item>
         <el-form-item label-width="100px"  :label="('绑定端口')">
-          <el-input v-model="temp.listen_port" />
+          <el-input v-model="temp.listen_port" placeholder="端口号范围：1-65535"/>
         </el-form-item>
         <el-form-item label-width="100px" :label="('网站文件路径')">
-          <el-input v-model="temp.root_dir" />
+          <el-input v-model="temp.root_dir" placeholder="默认路径：/var/www/"/>
         </el-form-item>
         <el-form-item label-width="150px" :label="('是否创建动态网站')">
           <el-radio-group v-model="temp.option">
@@ -195,7 +194,25 @@ export default {
       if (this.temp.domain === '' || this.temp.listen_port === undefined || this.temp.root_dir === null) {
         this.$notify({
           title: '失败',
-          message: '域名、端口、文件路径不能为空',
+          message: '请填写完整信息',
+          type: 'error',
+          duration: 2000
+        })
+        return
+      }
+      if (this.temp.listen_port.length > 5 || this.temp.listen_port.length < 1) {
+        this.$notify({
+          title: '失败',
+          message: '端口号长度为1-5位',
+          type: 'error',
+          duration: 2000
+        })
+        return
+      }
+      if (!Number.isInteger(Number(this.temp.listen_port)) || this.temp.listen_port < 1 || this.temp.listen_port > 65535) {
+        this.$notify({
+          title: '失败',
+          message: '端口范围为1-65535',
           type: 'error',
           duration: 2000
         })

@@ -621,34 +621,11 @@ export default {
         return (restaurant.value.toLowerCase().indexOf(queryString.toLowerCase()) === 0)
       }
     },
-    // loadAll() {
-    //   fetchDockerImagesList(this.listQuery).then(response => {
-    //     if (response.status === false) {
-    //       this.list = []
-    //       this.total = 0
-    //     } else {
-    //       this.list = response.images
-    //       this.total = response.length
-    //     }
-    //     const repositoriesAndTags = this.list.map(image => ({
-    //       repository: image.repository,
-    //       tag: image.tag
-    //     }))
-    //     console.log(repositoriesAndTags)
-    //     return [
-    //       repositoriesAndTags
-    //     ]
-    //   })
-    // },
     handleSelect(item) {
       this.temp.image_name = `${item.repository}:${item.tag}`
     },
     handleIconClick() {
       this.temp.image_name = ''
-    },
-    getSortClass: function(key) {
-      const sort = this.listQuery.sort
-      return sort === `+${key}` ? 'ascending' : 'descending'
     }
   }
 }

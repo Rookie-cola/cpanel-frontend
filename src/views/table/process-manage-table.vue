@@ -63,24 +63,6 @@
         </template>
       </el-table-column>
     </el-table>
-
-    <!--    <pagination-->
-    <!--      v-show="total>0"-->
-    <!--      :total="total"-->
-    <!--      :page.sync="listQuery.page"-->
-    <!--      :limit.sync="listQuery.limit"-->
-    <!--      @pagination="getList"-->
-    <!--    />-->
-
-    <!--    <el-dialog :visible.sync="dialogPvVisible" title="Reading statistics">-->
-    <!--      <el-table :data="pvData" border fit highlight-current-row style="width: 100%">-->
-    <!--        <el-table-column prop="key" label="Channel" />-->
-    <!--        <el-table-column prop="pv" label="Pv" />-->
-    <!--      </el-table>-->
-    <!--      <span slot="footer" class="dialog-footer">-->
-    <!--        <el-button type="primary" @click="dialogPvVisible = false">{{ $t('table.confirm') }}</el-button>-->
-    <!--      </span>-->
-    <!--    </el-dialog>-->
   </div>
 </template>
 
@@ -90,7 +72,6 @@ import waves from '@/directive/waves' // waves directive
 
 export default {
   name: 'ProcessManageTable',
-  // components: { Pagination },
   directives: { waves },
   filters: {
     statusFilter(status) {
@@ -109,14 +90,6 @@ export default {
       list: [],
       total: 0,
       listLoading: true,
-      // listQuery: {
-      //   page: 1,
-      //   limit: 20,
-      //   importance: undefined,
-      //   title: undefined,
-      //   type: undefined,
-      //   sort: '+id'
-      // },
       search: '',
       showReviewer: false,
       dialogFormVisible: false,
