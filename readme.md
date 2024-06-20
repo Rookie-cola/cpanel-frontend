@@ -13,3 +13,8 @@
 # 界面截图
 
 ![image](https://github.com/Rookie-cola/cpanel-frontend/blob/master/img-folder/资源监控.png)
+![image](https://github.com/Rookie-cola/cpanel-frontend/blob/master/img-folder/防火墙管理.png)
+![image](https://github.com/Rookie-cola/cpanel-frontend/blob/master/img-folder/进程管理.png)
+![image](https://github.com/Rookie-cola/cpanel-frontend/blob/master/img-folder/文件管理.png)
+![image](https://github.com/Rookie-cola/cpanel-frontend/blob/master/img-folder/网站管理.png)
+![image](https://github.com/Rookie-cola/cpanel-frontend/blob/master/img-folder/容器管理.png)
