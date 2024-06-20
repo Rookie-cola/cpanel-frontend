@@ -1,5 +1,5 @@
 # Linux 运维工具
-
+## 本项目基于 [vue-element-admin](https://github.com/PanJiaChen/vue-element-admin) 进行开发，感谢作者的辛勤付出！
 ## 使用说明
 
 - 请先安装 `git` 工具
@@ -10,4 +10,6 @@
 - 访问 `http://localhost:9527`
 - 搭配后端项目一起使用，请访问 [后端项目](https://github.com/Rookie-cola/cpanel-backend)
 
-## 本项目基于 [vue-element-admin](https://github.com/PanJiaChen/vue-element-admin) 进行开发，感谢作者的辛勤付出！
+# 界面截图
+
+![image](https://github.com/Rookie-cola/cpanel-frontend/blob/master/img-folder/资源监控.png)
